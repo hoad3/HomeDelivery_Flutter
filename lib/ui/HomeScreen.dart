@@ -1,7 +1,4 @@
 
-
-
-
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -13,18 +10,18 @@ class HomeScreen extends StatelessWidget {
         elevation: 0,
         title: DropdownButton<String>(
           value: 'Jakarta',
-          icon: Icon(Icons.keyboard_arrow_down),
+          icon: const Icon(Icons.keyboard_arrow_down),
           items: <String>['Jakarta', 'Ho Chi Minh', 'Ha Noi'].map((String value) {
             return DropdownMenuItem<String>(
               value: value,
-              child: Text(value, style: TextStyle(color: Colors.black)),
+              child: Text(value, style: const TextStyle(color: Colors.black)),
             );
           }).toList(),
           onChanged: (String? newValue) {},
         ),
         actions: [
           IconButton(
-            icon: Icon(Icons.notifications_none, color: Colors.black),
+            icon: const Icon(Icons.notifications_none, color: Colors.black),
             onPressed: () {},
           ),
         ],
@@ -36,15 +33,15 @@ class HomeScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SearchBar(),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               PropertyTypeSelector(),
-              SizedBox(height: 16),
-              SectionHeader(title: 'Near from you'),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
+              const SectionHeader(title: 'Near from you'),
+              const SizedBox(height: 16),
               NearFromYouList(),
-              SizedBox(height: 16),
-              SectionHeader(title: 'Best for you'),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
+              const  SectionHeader(title: 'Best for you'),
+              const SizedBox(height: 16),
               BestForYouList(),
             ],
           ),
@@ -63,7 +60,7 @@ class SearchBar extends StatelessWidget {
           child: TextField(
             decoration: InputDecoration(
               hintText: 'Search address, or near you',
-              prefixIcon: Icon(Icons.search),
+              prefixIcon: const Icon(Icons.search),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(12),
                 borderSide: BorderSide.none,
@@ -73,14 +70,14 @@ class SearchBar extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(width: 8),
+        const SizedBox(width: 8),
         Container(
           decoration: BoxDecoration(
             color: Colors.blue,
             borderRadius: BorderRadius.circular(12),
           ),
           child: IconButton(
-            icon: Icon(Icons.filter_list, color: Colors.white),
+            icon: const Icon(Icons.filter_list, color: Colors.white),
             onPressed: () {},
           ),
         ),
@@ -92,7 +89,7 @@ class SearchBar extends StatelessWidget {
 class PropertyTypeSelector extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         PropertyTypeButton(label: 'House', selected: true),
@@ -148,7 +145,7 @@ class SectionHeader extends StatelessWidget {
         ),
         TextButton(
           onPressed: () {},
-          child: Text('See more'),
+          child: const Text('See more'),
         ),
       ],
     );
@@ -212,7 +209,7 @@ class NearFromYouCard extends StatelessWidget {
                 top: 8,
                 right: 8,
                 child: Container(
-                  padding: EdgeInsets.all(4),
+                  padding: const EdgeInsets.all(4),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(12),

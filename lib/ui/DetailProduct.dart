@@ -1,7 +1,4 @@
 
-
-
-
 import 'package:flutter/material.dart';
 import 'package:test_1/main.dart';
 
@@ -13,7 +10,6 @@ class HouseDetailPage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              // Image and top icons
               Stack(
                 children: [
                   Container(
@@ -98,14 +94,14 @@ class HouseDetailPage extends StatelessWidget {
                       "Description",
                       style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(height: 8),
+                    const SizedBox(height: 8),
                     const  Text(
                       "The 3 level house that has a modern design, has a large pool and a garage that fits up to four cars...",
                       style: TextStyle(fontSize: 14),
                     ),
                     TextButton(
                       onPressed: () {},
-                      child: Text("Show More", style: TextStyle(color: Colors.blue)),
+                      child: const Text("Show More", style: TextStyle(color: Colors.blue)),
                     ),
                   ],
                 ),
@@ -158,7 +154,7 @@ class HouseDetailPage extends StatelessWidget {
                         Expanded(
                           child: Container(
                             height: 80,
-                            margin: EdgeInsets.only(right: 8),
+                            margin: const EdgeInsets.only(right: 8),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(12),
                               image: const DecorationImage(
@@ -172,7 +168,7 @@ class HouseDetailPage extends StatelessWidget {
                         Expanded(
                           child: Container(
                             height: 80,
-                            margin: EdgeInsets.only(right: 8),
+                            margin: const EdgeInsets.only(right: 8),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(12),
                               image: const DecorationImage(
@@ -186,7 +182,7 @@ class HouseDetailPage extends StatelessWidget {
                         Expanded(
                           child: Container(
                             height: 80,
-                            margin: EdgeInsets.only(right: 8),
+                            margin: const EdgeInsets.only(right: 8),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(12),
                               image: const DecorationImage(
@@ -256,7 +252,7 @@ class HouseDetailPage extends StatelessWidget {
                     ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                        padding: EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                        padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(12),
                         ),

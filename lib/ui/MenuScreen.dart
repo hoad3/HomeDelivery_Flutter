@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 class MenuScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SafeArea( // Thêm SafeArea để tránh tràn
+    return SafeArea(
       child: Container(
         color: Colors.blue,
         child: Column(
@@ -66,7 +66,7 @@ class MenuItem extends StatelessWidget {
             icon,
             color: isSelected ? Colors.white : Colors.white70,
           ),
-          SizedBox(width: 16),
+          const SizedBox(width: 16),
           Text(
             label,
             style: TextStyle(
@@ -74,7 +74,7 @@ class MenuItem extends StatelessWidget {
               fontSize: 16,
             ),
           ),
-          if (isSelected) Spacer(), // Tạo khoảng trống giữa icon và indicator
+          if (isSelected) Spacer(),
           if (isSelected)
             Container(
               width: 6,

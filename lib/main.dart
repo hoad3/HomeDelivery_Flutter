@@ -11,7 +11,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -26,7 +25,6 @@ class MyApp extends StatelessWidget {
 }
 
 class MainScreen extends StatelessWidget {
-  // Tạo một GlobalKey để điều khiển trạng thái của Scaffold
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -38,7 +36,6 @@ class MainScreen extends StatelessWidget {
         leading: IconButton(
           icon: const Icon(Icons.menu),
           onPressed: () {
-            // Mở Drawer bằng GlobalKey
             _scaffoldKey.currentState?.openDrawer();
           },
         ),
